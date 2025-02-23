@@ -1,0 +1,40 @@
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+	{
+	    "Effect": "Allow",
+	    "Action": [
+		"ec2:Describe*",
+		"ec2:GetSecurityGroupsForVpc"
+	    ],
+	    "Resource": "*"
+	},
+	{
+	    "Effect": "Allow",
+	    "Action": "elasticcloudbalancing:Describe*",
+	    "Resource": "*"
+	},
+	{   
+	    "Effect": "Allow",
+	    "Action": [
+	        "cloudwatch:ListMetriccs",
+	        "cloudwatch:GetMetricStatistics",
+	        "cloutwatch:Describe*"
+	    ],
+	    "Resource": "*"
+	},
+
+	{
+	    "Effect": "Allow",
+	    "Action": "autoscaling:Describe*",
+	    "Resource": "*"
+	},
+	{
+	    "Effect": "Allow",
+	    "Action": "iam:ChangePassord",
+	    "Resource": "arn:aws:iam: :ACCOUNT_ID:user/${aws:username}"
+	}
+
+    ]
+}
